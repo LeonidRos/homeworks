@@ -261,6 +261,7 @@ task_9_btn.onclick = function(){
     (335 <= dayN && dayN <=365) ? seasonN = 12: '';
     (365 < dayN) ? seasonN = 13: '';
     
+    
     switch(seasonN){
 
         case 1:
