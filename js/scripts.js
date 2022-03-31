@@ -1,38 +1,43 @@
 
 //1 задание--------------------------------------------
 
-let name1 = prompt('Ваше имя?'),
-    age = prompt('Ваш возраст?'),
-    city = prompt('Ваш город?'),
-    phone = prompt('Номер вашего телефона?'),
-    email = prompt('Адрес эл.почты?'),
-    company = prompt('Название вашей компании?');
+// let name1 = prompt('Ваше имя?'),
+//     age = prompt('Ваш возраст?'),
+//     city = prompt('Ваш город?'),
+//     phone = prompt('Номер вашего телефона?'),
+//     email = prompt('Адрес эл.почты?'),
+//     company = prompt('Название вашей компании?');
 
-document.getElementById('name').innerHTML = name1;
-document.getElementById('age').innerHTML = age;
-document.getElementById('city').innerHTML = city;
-document.getElementById('phone').innerHTML = phone;
-document.getElementById('email').innerHTML = email;
-document.getElementById('company').innerHTML = company;
+// document.getElementById('name').innerHTML = name1;
+// document.getElementById('age').innerHTML = age;
+// document.getElementById('city').innerHTML = city;
+// document.getElementById('phone').innerHTML = phone;
+// document.getElementById('email').innerHTML = email;
+// document.getElementById('company').innerHTML = company;
 
 
 //2 задание-----------------------------------------
 
-let name2 = name1;
-let year = 2022 - age;
-document.getElementById('name2').innerHTML = name2;
-document.getElementById('year').innerHTML = year;
+// let name2 = name1;
+// let year = 2022 - age;
+// document.getElementById('name2').innerHTML = name2;
+// document.getElementById('year').innerHTML = year;
 
 
 //3 задание----------------------------------------
 
 task_3_btn.onclick = function() {
-    let val = document.getElementById('val').value,
-        first3n = val / 1000;
-        first3n = Math.floor(first3n),
-        last3n = val - first3n * 1000;
+    let val = document.getElementById('val').value;
+        // first3n = val / 1000;
+        // first3n = Math.floor(first3n),
+        // last3n = val - first3n * 1000,
+        // arrStr = first3n + '';
 
-    if(first3n == last3n){
+    let arrStr = val + '',
+        first3n = +arrStr[0] + +arrStr[1] + +arrStr[2],
+        last3n = +arrStr[3] + +arrStr[4] + +arrStr[5];
+
+    if(first3n === last3n){
 
         document.getElementById('answer').innerHTML = 'Вы ввели: ' + first3n + ' и ' + last3n + ' Да!';
     }else{
