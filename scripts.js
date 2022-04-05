@@ -50,16 +50,45 @@ console.log('Result ' + result);
 
 console.warn('Задание 4------------------------');
 
-// Дан массив числами (строчного типа), например: [‘10’, ‘20’, ‘30’, ‘50’, ‘235’, ‘3000’].
-// Выведите на экран только те числа из массива, которые начинаются на цифру 1, 2 или
-// 5.
-
 let arr4 = ['10', '20', '30', '50', '235', '300', '3234', '44', '6565', '555'],
     int4Buff = [];
 
 for(let i = 0; i < arr4.length; i++){
 
     int4Buff = arr4[i].split('');
+    (+int4Buff[0] === 1) ? console.log(arr4[i]) : '';
+    (+int4Buff[0] === 2) ? console.log(arr4[i]) : '';
+    (+int4Buff[0] === 5) ? console.log(arr4[i]) : '';
     
-
 }
+
+
+console.warn('Задание 5------------------------');
+
+let arr5 = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'];
+
+for(let i = 0; i < arr5.length; i++){
+
+
+    if(i === 5 || i === 6){
+
+        document.write('<b> ' + arr5[i] + '</b>');
+    }else{
+        document.write(arr5[i] + ' ');
+    }
+}
+
+console.warn('Задание 6------------------------');
+
+// Создайте массив с произвольными данными. Добавьте в конец массива любой элемент,
+// и получите последний элемент массива, используя свойство length.
+
+let arr6 = [1, 2, 44, 22, 232, 'gre', true, 404];
+
+arr6.push('makaba');
+
+let elem6 = arr6[arr6.length - 1];
+
+console.log(arr6);
+console.log('Last element of this array: ' + elem6);
+
