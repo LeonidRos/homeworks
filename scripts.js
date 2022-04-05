@@ -96,18 +96,93 @@ console.warn('Задание 7------------------------');
 // значение. Выведите получившийся массив на экран. Выполните сортировку чисел
 // массива, и выведите его на экран.
 
-document.write('<br><br>');
+// document.write('<br><br>');
 
-let arr7 = [],
-    l7 = 0;
-while(true){
+// let arr7 = [],
+//     l7 = 0,
+//     max7 = -Infinity,
+//     num7Buffer = [];
 
-    l7 = prompt('Задание 7. Введите число');
-    arr7.push(l7);
+// while(true){
 
-    if(l7 == '')break;
-    
+//     l7 = prompt('Задание 7. Введите число');
+//     arr7.push(l7);
+//     if(l7 == '')break;
+// }
+
+// num7Buffer = arr7.slice(0);
+
+
+// document.write('еще норм!!: ' + arr7 + '<br><br>');//-----------------------
+
+
+// for(let i = 0; i < num7Buffer.length; i++){
+
+//     if(num7Buffer[i] > max7){
+
+//         max7 = num7Buffer[i];
+
+//         num7Buffer.unshift(max7);
+//         // num7Buffer.splice(i, 1);
+//     }
+// }
+
+// document.write('Ваш массив: ' + arr7 + '<br><br>');
+// document.write('Ваш отсортированный массив: ' + arr7);
+
+//Нужно уточнить!
+
+console.warn('Задание 8------------------------');
+
+//console.log([12, false, 'Текст', 4, 2, -5, 0].reverse());
+
+let arr8 = [12, false, 'Текст', 4, 2, -5, 0].reverse();
+
+let a8 = 0;
+while(a8 < arr8.length){
+
+    console.log(arr8[a8]);
+    a8++;
 }
 
-document.write('Ваш массив: ' + arr7 + '<br><br>');
-document.write('Ваш отсортированный массив: ' + arr7.sort());
+console.warn('Задание 9------------------------');
+
+let arr9 = [5, 9, 21, , , 9, 78, , , , 6],
+    c9 = 0;
+
+for(let i = 0; i < arr9.length; i++){
+
+    if(arr9[i] == undefined){
+
+        c9++;
+    }
+}
+
+console.log(`null cells: ${c9}`);
+
+console.warn('Задание 10------------------------');
+
+let arr10 = [48,9,0,4,21,2,1,0,8,84,76,8,4,13,2],
+    sum10 = 0,
+    startArrIndex = arr10.indexOf(0);
+    endArrIndex = arr10.lastIndexOf(0);
+
+for(let i = startArrIndex+1; i < endArrIndex; i++ ){
+
+    sum10 += arr10[i];
+}
+
+console.log(sum10);
+
+console.warn('Задание 11------------------------');
+
+let h = prompt('Задание 10. Введите высоту треугольника.'),
+    triangleNum = 1,
+    whiteSpaceNum = 0;
+
+for(let i = 1; i <= h; i++){
+    
+    whiteSpaceNum = h - i;
+    triangleNum = i * 2 - 1;
+    console.log(' '.repeat(whiteSpaceNum) + '^'.repeat(triangleNum));
+}
