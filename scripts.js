@@ -30,7 +30,6 @@ while(t2Counter >= 11){
     t2Counter--;
 }
 
-
 console.warn('Задание 3------------------------');
 
 let t3Sum = 0;
