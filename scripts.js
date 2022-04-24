@@ -1,160 +1,77 @@
 
-console.warn('Задание 1------------------------');
 
-let strT1 = '';
+const Car = function(){ 
 
-for(let i = 0; i <= 50; i++){
+    let typeFuel, fuel, weight, engVol, fuelcoff;
 
-    strT1 += i + ' ';
-}
+    this.setFuelType = function(t = 'Дизель'){
 
-console.log(strT1);
-
-strT1 = '';
-
-for(let i = 38; i >= 0; i--){
-
-    strT1 += i + ' ';
-}
-
-console.log(strT1);
-
-
-console.warn('Задание 2------------------------');
-
-let t2Counter = 89;
-
-while(t2Counter >= 11){
-
-    document.write(t2Counter + '<br />');
-    t2Counter--;
-}
-
-
-console.warn('Задание 3------------------------');
-
-let t3Sum = 0;
-for(let i = 0; i <= 100; i++){
-
-    t3Sum += i;
-
-}
-
-console.log(t3Sum);
-
-
-console.warn('Задание 4------------------------');
-
-let t4Sum = 0;
-
-for(let i = 1; i <= 5; i++){
-
-    t4Sum += i;
-    console.log('сумма числа ' + i + ' = ' + t4Sum);
-}
-
-console.warn('Задание 5------------------------');
-
-let arrT5 = [],
-    t5Counter = 8;
-
-for(; t5Counter <= 56; t5Counter += 2){
-
-    arrT5.push(t5Counter);
-}
-console.log('for ', arrT5);
-
-arrT5.splice(0);
-
-t5Counter = 8;
-
-while(t5Counter <= 56){
-
-    arrT5.push(t5Counter);
-    t5Counter += 2;
-}
-console.log('while ', arrT5);
-
-console.warn('Задание 6------------------------');
-
-let a = 2,
-    c = 0;
-
-for(let i = 2; i <= 10; i++){
-
-
-    for(let j = 2; j <= 10; j++){
-
-        c = a * j;
-        console.log(a + ' * ' + j + ' = ' + c);
+        if(!isNaN(t)){
+            console.log('Введите тип топлива. "Бензин", "Дизель", "Пропан", "Метан"');
+            return;
+        }
+        typeFuel = t;
+        fuelcoff = this.getFuelCoff(t);
     }
-    console.log('...');
-    a++;
-}
 
-console.warn('Задание 7------------------------');
+    this.setFuel = function(f = 10){
 
-let n = 1000,
-    num = 0;
+        if(isNaN(f)){
+            console.log('Введите кол-во топлива в литрах.');
+            return;
+        }
+        fuel = +f;
+    }
 
-while(true){
+    this.setWeight = function(w = 1350){
 
-    n /= 2;
-    num++;
-    if(n < 50)break;
-}
+        if(isNaN(w)){
+            console.log('Введите вес авто в кг.');
+            return;
+        }
+        weight = +w;
+    }
 
-console.log('Полученное число - ' + +n + ' количество итераций - ' + +num);
+    this.setEngeVol = function(e = 2.0){
 
-console.warn('Задание 8------------------------');
+        if(isNaN(e)){
+            console.log('Введите объем двигателя в литрах.');
+            return;
+        }
+        engVol = +e;
+    }
+    
+    this.getResult = function(){
 
-let t7 = 0,
-    t7Sum = 0,
-    t7AvSum = 0,
-    t7Counter = 0;
+        
+        let result = fuel * (fuelcoff) / (weight / 1000) / (engVol / 40);
+  
+        console.log(`
+       
+        Объем двигателя: ${engVol}л.
+        Вес авто: ${weight}кг.
+        Тип топлива: ${typeFuel}.
+        Кол-во топлива: ${fuel}л.
+        Вы сможете проехать около: ${result}км.
 
-while(true){
+        `);
+    }
+    
+    this.getFuelCoff = function(typeFuel){
 
-    t7 = +prompt('Задание 9. Введите число.');
-    t7Sum += t7;
-    t7Counter++;
-    t7AvSum = t7Sum / t7Counter;
-    if(t7 == '' || t7 == 0)break;
-}
+        if(typeFuel == 'Бензин')return fuelcoff = 0.7;
+        else if(typeFuel == 'Дизель')return fuelcoff = 1.2;
+        else if(typeFuel == 'Пропан')return fuelcoff = 1.4;
+        else if(typeFuel == 'Метан')return fuelcoff = 1.5;
+    }
 
-alert('Общая сумма = '+ t7Sum + '. Cреднее арифметическое = ' + t7AvSum);
+};
 
-console.warn('Задание 9------------------------');
+let car = new Car();
+car.setEngeVol();
+car.setFuel();
+car.setWeight();
+car.setFuelType();
+car.getResult();
 
-let strT9 = '4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 8 1 36 8 57',
-    maxN = -Infinity,
-    minN = Infinity,
-    arrT9 = strT9.split(' ');
-
-console.log(arrT9);
-
-for(let i = 0; i < arrT9.length; i++){
-
-    if(maxN < +arrT9[i]) maxN = +arrT9[i];
-    if(minN > +arrT9[i]) minN = +arrT9[i];
-}
-
-console.log('Самое большое число в строке = ' + maxN + '\n' + 'Самое маленькое число в строке = ' + minN);
-
-
-console.warn('Задание 9------------------------');
-
-let t10 = prompt('Задание 10. Введите число n'),
-    strT10 = t10 + '';
-    let arrT10 = 0;
-    let arrT10Buffer = [];
-
-for(let i = 0; i < strT10.length; i++){
-
-    arrT10 += +strT10[i];
-}
-arrT10Buffer = strT10.split('');
-
-let arrReverse = arrT10Buffer.reverse().join('');
-
-console.log('цифр в числе = ' + strT10.length + '; сумма = ' + arrT10 + '; обратный порядок = ' + +arrReverse);
+//Формула не работает. Слишком много переменных сложно подобрать правильную зависимость.
