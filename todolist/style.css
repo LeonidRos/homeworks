@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nots{
+
+    width: 400px;
+    min-height: 500px;
+    margin: 20px;
+
+    background-color: #f9fdf9;
+    border: 1px solid #ededed;
+    box-shadow: 0 0 8px #ccc;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.nots__title{
+
+    padding: 15px 5px;
+    width: 100%;
+
+    border: 0;
+    box-shadow: 0 2px 5px #d8f1eb;
+    background-color: #caf3e9;
+    color: #444444;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+.addNewList{
+
+    width: 20px;
+    height: 4px;
+    background-color: #555;
+    position: absolute;
+    right: 10px;
+    top: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.addNewList::after{
+
+    content: '';
+    display: block;
+    width: 20px;
+    height: 4px;
+    background-color: #555;
+    transform: rotate(90deg);
+}
+
+.addNewList:hover{
+
+    transform: rotate(90deg);
+}
+
+.nots__new{
+
+    margin: 25px 0 10px 10px;
+    padding: 15px 5px;
+    width: 77%;
+
+    border: 1px solid #3a3a3a;
+
+    background-color: transparent;
+    color: #444444;
+    font-size: 16px;
+}
+
+.nots__new:hover{
+
+    box-shadow: 0 0 10px #c8f3e9;
+}
+
+.nots__new::placeholder{
+
+    font-size: 16px;
+    color: #444444;
+    font-style: italic;
+}
+
+
+.btnNewNote{
+
+    border: 0;
+    background-color: transparent;
+    width: 20%;
+    height: 55px;
+    margin: 25px 0 0 0;
+    font-size: 24px;
+    color: #444444;
+    cursor: pointer;
+}
+
+.nots__addNewNote{
+
+    min-height: 30px;
+    width: 400px;
+    border-bottom: 1px solid #666;
+    padding: 4px 10px 4px 10px;
+    word-break: break-all;
+
+}
