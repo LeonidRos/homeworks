@@ -63,7 +63,7 @@ const ToDoList = function(){
 
         let note = document.createElement('div');
         note.classList.add('nots__addNewNote');
-        toDoList.append(note);
+        btnNewNote.after(note);
         note.innerHTML = txt;
     }
 
