@@ -1,0 +1,10 @@
+.active{
+
+    background-color: #111 !important;
+    color: #fff !important;
+}
+
+.hide{
+
+    display: none !important;
+}
