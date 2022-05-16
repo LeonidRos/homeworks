@@ -1,5 +1,5 @@
 window.addEventListener('load', function(){
 
-    gallery('gallery');
+    filter('filter');
 
 });
