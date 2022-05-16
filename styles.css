@@ -10,3 +10,46 @@ body {
     background-color: #ededed;
 }
 
+.filter{
+
+    list-style: none;
+    display: flex;
+    margin-bottom: 20px;
+    margin: 5px;
+}
+
+.filter li{
+
+    padding: 20px;
+    background-color: #ccc;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.filter li:hover{
+
+    background-color: #111;
+    color: #fff;
+}
+
+.list{
+
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.list li{
+
+    width: 300px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px;
+    background-color: #ccc;
+    margin: 5px;
+}
+
+.list li img{
+
+    margin-bottom: 10px;
+}

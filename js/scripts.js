@@ -1,5 +1,5 @@
 window.addEventListener('load', function(){
 
-    filter('filter');
+    filter('portfolio');
 
 });
