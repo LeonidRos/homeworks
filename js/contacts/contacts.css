@@ -1,8 +1,13 @@
+
+.cont__main{
+    display: block;
+}
+
 .contacts__parent{
 
     width: 650px;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 30px 20px 20px 20px;
+    border-radius: 10px 10px 0px 0px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -16,7 +21,7 @@
 
 .contacts__parent_active{
 
-    background-color: #666;
+    background-color: #232;
     box-shadow: 0 0 20px #666;
 }
 
@@ -54,24 +59,24 @@
     box-shadow: 0 0 10px #666;
 }
 
-.cont__main{
-    display: flex;
-    flex-flow: row wrap;
-}
 
 .cont__parent{
 
-    width: 300px;
-    background-color: #333;
-    color: #fff;
+    width: 650px;
+    background-color: #222;
+    color: #ddd;
     padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
+    margin: 0 auto;
+    border: 1px solid #666;
+    /* display: flex; */
     
 }
+
 .cont__child{
 
     margin-bottom: 6px;
+    width: 440px;
+    display: inline-block;
 }
 
 .hide{
@@ -81,11 +86,13 @@
 
 .edit__btn_ok{
 
-    background-color: #0f0;
+    background-color: #3a3;
+    
 }
 
 
 .edit__btn_cancel{
 
-    background-color: #f00;
+    background-color: #a33;
+    
 }

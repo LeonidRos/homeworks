@@ -183,15 +183,20 @@ const NewContacts = function(){
             editOkElem.remove();
             editCancelElem.remove();
             dom.removeClass(parentElem, 'contacts__parent_active');
-        }
-    
+        }     
 
         let editOkElem = dom.create('button'),
         editCancelElem = dom.create('button');
         dom.addClass(parentElem, 'contacts__parent_active');
 
+        if(parentElem.querySelector('.edit__btn_ok') || parentElem.querySelector('.edit__btn_cancel')){
+            parentBtnElem.lastChild.remove();
+            parentBtnElem.lastChild.remove();
+        }
+
         dom.in(editOkElem, 'OK');
         dom.in(editCancelElem, 'Cancel');
+        
         
         dom.addClass(editOkElem, 'contacts__btn');
         dom.addClass(editOkElem, 'edit__btn_ok');
@@ -288,7 +293,6 @@ const NewContacts = function(){
         if(inputAgeElem.value)data.age = inputAgeElem.value.match(/\d+/g).join('');
         if(inputPhoneElem.value)data.phone = inputPhoneElem.value;
         if(inputMailElem.value)data.email = inputMailElem.value;
-
 
         this.add(data);
         reboot();
